@@ -2,7 +2,7 @@
 #emails = "zuck26@facebook.com" "page33@google.com" "jeff42@amazon.com"
 #desired_output = [('zuck26', 'facebook', 'com'),
 #                 ('page33', 'google', 'com'), ('jeff42', 'amazon', 'com')]
-#
+
 
 import re
 
@@ -20,12 +20,11 @@ def display(email):
     print(result.group(2))
     print(result.group(3))
 
-
-
 display(email1)
 display(email2)
 display(email3)
 print("\n")
+
 
 #Q.2- Retrieve all the words starting with ‘b’ or ‘B’ from the following text.
 #text = "Betty bought a bit of butter, But the butter was so bitter,
@@ -42,6 +41,7 @@ result=p.findall(text)
 for text in result:
     print(text)
 print("\n")
+
 
 #Q.3- Split the following irregular sentence into words
 #sentence = "A, very very; irregular_sentence"
@@ -65,9 +65,9 @@ print("\n")
 
 import re
 
-tweets='''Good advice! RT @TheNextWeb: What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt #rstats'''
+tweets="Good advice! RT @TheNextWeb: What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt #rstats"
 
-p=re.compile(r"(.+) RT (.+): (.+) http(.+)")
+p=re.compile(r"(.+)! RT (.+): (.+) http(.+)")
 res=p.findall(tweets)
 print(res[0][0],res[0][2])
 print("\n")
